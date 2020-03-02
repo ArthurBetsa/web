@@ -66,8 +66,8 @@
                     </a>
                 </div>
 
-                <button class="btn">HIRE ME</button>
-                <a class="btn">SEE MY RESUME</a>
+                <button class="btn" data-modal="#modal_hire_me" >HIRE ME</button>
+                <a class="btn" data-modal="#modal_resume" >SEE MY RESUME</a>
 
 
                 <img class="intro__photo" src="images/photo.png" alt="">
@@ -262,7 +262,7 @@
                             10 <br> june
                         </time>
                         <a href="">
-                        <img class="articles__photo" src="https://placehold.it/370x257" alt="">
+                            <img class="articles__photo" src="https://placehold.it/370x257" alt="">
                         </a>
                     </div>
                     <div class="articles__content">
@@ -289,7 +289,7 @@
                             15 <br> june
                         </time>
                         <a href="">
-                        <img class="articles__photo" src="https://placehold.it/370x257" alt="">
+                            <img class="articles__photo" src="https://placehold.it/370x257" alt="">
                         </a>
                     </div>
                     <div class="articles__content">
@@ -316,7 +316,7 @@
                             20 <br> june
                         </time>
                         <a href="">
-                        <img class="articles__photo" src="https://placehold.it/370x257" alt="">
+                            <img class="articles__photo" src="https://placehold.it/370x257" alt="">
                         </a>
                     </div>
                     <div class="articles__content">
@@ -474,16 +474,23 @@
 
 
 <!-- Modals -->
-<div class="modal" style="display: none">
-    <div class="modal__dialog" >
+<div id="project_1" class="modal" >
+    <div class="modal__dialog">
 
-        <button class="modal__close" type="button">
+        <button class="modal__close" type="button" data-close>
             <img src="images/modal-close.svg" alt="Close">
         </button>
 
         <div class="modal-work">
             <div class="modal-work__preview">
-                <img class="modal-work__photo" src="https://placehold.it/790x780" alt="">
+                <div id="works-slider">
+                    <div>
+                        <img class="modal-work__photo" src="https://placehold.it/790x780" alt="">
+                    </div>
+                    <div>
+                        <img class="modal-work__photo" src="https://placehold.it/790x780/333" alt="">
+                    </div>
+                </div>
             </div>
             <div class="modal-work__content">
 
@@ -500,8 +507,12 @@
                 </div>
 
                 <div class="modal-work__text">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur dicta, recusandae debitis iusto quos voluptatum at. Dolorum a, velit rerum dicta aut sapiente, optio accusantium? Sunt sed praesentium est minima.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur dicta, recusandae debitis iusto quos voluptatum at. Dolorum a, velit rerum dicta aut sapiente, optio accusantium? Sunt sed praesentium est minima.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur dicta, recusandae debitis
+                        iusto quos voluptatum at. Dolorum a, velit rerum dicta aut sapiente, optio accusantium? Sunt sed
+                        praesentium est minima.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur dicta, recusandae debitis
+                        iusto quos voluptatum at. Dolorum a, velit rerum dicta aut sapiente, optio accusantium? Sunt sed
+                        praesentium est minima.</p>
                 </div>
 
                 <div class="modal-work__footer">
@@ -522,10 +533,10 @@
 </div><!-- /.modals -->
 
 <!-- Modals2-->
-<div class="modal" style="display: none;">
+<div id="modal_resume" class="modal" >
     <div class="modal__dialog">
 
-        <button class="modal__close" type="button">
+        <button class="modal__close" data-close type="button">
             <img src="images/modal-close.svg" alt="Close">
         </button>
 
@@ -546,7 +557,9 @@
                         <h5 class="timeline__subtitle">Freelancer</h5>
                         <div class="timeline__position">Art Director</div>
                         <div class="timeline__text">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis debitis autem aspernatur sed iusto maiores nihil magni provident dolore, animi nemo est corporis in facilis eum quae sint aliquam, ipsam?</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis debitis autem aspernatur
+                                sed iusto maiores nihil magni provident dolore, animi nemo est corporis in facilis eum
+                                quae sint aliquam, ipsam?</p>
                         </div>
                     </div>
 
@@ -555,7 +568,9 @@
                         <h5 class="timeline__subtitle">Freelancer</h5>
                         <div class="timeline__position">Art Director</div>
                         <div class="timeline__text">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis debitis autem aspernatur sed iusto maiores nihil magni provident dolore, animi nemo est corporis in facilis eum quae sint aliquam, ipsam?</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis debitis autem aspernatur
+                                sed iusto maiores nihil magni provident dolore, animi nemo est corporis in facilis eum
+                                quae sint aliquam, ipsam?</p>
                         </div>
                     </div>
 
@@ -564,7 +579,9 @@
                         <h5 class="timeline__subtitle">Freelancer</h5>
                         <div class="timeline__position">Art Director</div>
                         <div class="timeline__text">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis debitis autem aspernatur sed iusto maiores nihil magni provident dolore, animi nemo est corporis in facilis eum quae sint aliquam, ipsam?</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis debitis autem aspernatur
+                                sed iusto maiores nihil magni provident dolore, animi nemo est corporis in facilis eum
+                                quae sint aliquam, ipsam?</p>
                         </div>
                     </div>
                 </div>
@@ -627,7 +644,9 @@
                         <h5 class="timeline__subtitle">UI/UX Design</h5>
                         <div class="timeline__position">LA University, USA</div>
                         <div class="timeline__text">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis debitis autem aspernatur sed iusto maiores nihil magni provident dolore, animi nemo est corporis in facilis eum quae sint aliquam, ipsam?</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis debitis autem aspernatur
+                                sed iusto maiores nihil magni provident dolore, animi nemo est corporis in facilis eum
+                                quae sint aliquam, ipsam?</p>
                         </div>
                     </div>
                 </div><!-- /.timeline__col -->
@@ -644,12 +663,11 @@
 </div><!-- /.modals2 -->
 
 
-
 <!--Modal3-->
-<div class="modal" style="display: none" >
+<div id="modal_hire_me" class="modal" >
     <div class="modal__dialog  modal__dialog--sm">
 
-        <button class="modal__close" type="button">
+        <button class="modal__close" data-close type="button">
             <img src="images/modal-close.svg" alt="Close">
         </button>
 
@@ -672,12 +690,14 @@
                 <form class="form" action="/" method="post">
                     <div class="form__group">
                         <label class="form__label" for="input-email">Adress e-mail</label>
-                        <input class="form__input" name="input-email" type="text" id="input-email" placeholder="Adress e-mail">
+                        <input class="form__input" name="input-email" type="text" id="input-email"
+                               placeholder="Adress e-mail">
                     </div>
 
                     <div class="form__group">
                         <label class="form__label" for="input-text">Request</label>
-                        <textarea class="form__textarea" name="input-text" id="input-text" placeholder="Type your request..."></textarea>
+                        <textarea class="form__textarea" name="input-text" id="input-text"
+                                  placeholder="Type your request..."></textarea>
                     </div>
 
                     <div class="text-right">
@@ -691,6 +711,7 @@
 </div><!-- /.modal3 -->
 
 <!--JS-->
+<script type="text/javascript" src="js/slick.min.js"></script>
 <script type="text/javascript" src="js/app.js"></script>
 
 
