@@ -1,28 +1,41 @@
 // main: ../work.less
-.work{
+.work {
   overflow: hidden;
   border-radius: 10px;
   box-shadow: 0 0 4px fade(black, 25%);
-  &:hover{
+
+  &:hover {
     box-shadow: 0 0 25px fade(@black, 50%);
     transition: box-shadow linear .2s;
   }
+
+  @media @mobile {
+    margin: 0 auto;
+    max-width: 370px;
+  }
+
 }
-.work__image{
-display: block;
+
+.work__image {
+  display: block;
   max-width: 100%;
   height: auto;
+
+
 }
-.work__content{
+
+.work__content {
   padding: 1rem 0.8rem;
 }
-.work__cat{
+
+.work__cat {
   margin-bottom: 0.5rem;
   font-size: .8rem;
   color: @black;
   text-transform: uppercase;
 }
-.work__title{
+
+.work__title {
   font-size: 1.06rem;
   color: @black;
   text-transform: uppercase;

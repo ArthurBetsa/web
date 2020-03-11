@@ -5,11 +5,22 @@
   flex-wrap: wrap;
   margin: 0 -1rem 2.8rem;
 
+
 }
 
 .portfolio__col{
   flex-basis: 33.33333%;
-
   padding: 1rem;
+
+  @media @tablet{
+    margin: 0  auto;
+    flex-basis:40%;
+
+    display: block;
+    }
+
+  @media @mobile{
+    flex-basis: 60%;
+  }
 
 }

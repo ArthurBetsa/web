@@ -1,5 +1,6 @@
 $(function () {
 
+    let workSlider = $('[data-slider="slick"]');
 
     // filter
     let filter = $("[data-filter]");
@@ -36,7 +37,7 @@ $(function () {
         $(modalId).addClass('show');
         $('body').addClass("no-scroll");
 
-        $("#works-slider").slick('setPosition');
+        workSlider.slick('setPosition');
 
     });
 
@@ -72,12 +73,52 @@ $(function () {
     // slider: https://kenwheeler.github.io/slick/
     // ===========================================
 
-    $('#works-slider').slick({
+    workSlider.slick({
         infinite: true,
         slidesToShow: 1,
         slidesToScroll: 1,
         fade: true,
         arrows: false,
-        dots: false
+        dots: true
     });
+
+
+    // и тут я не могу сделать стрелочную функцию, почему?
+    $(".slickPrev").on("click", function (event) {
+
+        event.preventDefault();
+
+        let curentSlider = $(this)
+            .parents('.modal')
+            .find('[data-slider="slick"]');
+
+
+        curentSlider.slick("slickPrev");
+    });
+    $(".slickNext").on("click", function (event) {
+
+        event.preventDefault();
+        let curentSlider = $(this)
+            .parents('.modal')
+            .find('[data-slider="slick"]');
+
+        curentSlider.slick("slickNext");
+    });
+
+    // =================
+    // Mobile navigation
+    // =================
+
+    let navToggle = $('#navToggle');
+    let nav = $('#nav');
+
+    navToggle.on("click", function(event) {
+        event.preventDefault();
+
+        nav.toggleClass("show");
+    });
+
+
+
 });
+
