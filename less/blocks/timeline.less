@@ -33,6 +33,16 @@
     &--right {
         padding-left: 3.2rem;
     }
+
+    @media @mobile{
+        &--left{
+            padding-right: 1rem;
+        }
+        &--right {
+            padding-left: 1rem;
+        }
+    }
+
 }
 
 .timeline__title {
@@ -42,6 +52,12 @@
     color: @black;
     text-transform: uppercase;
     font-weight: 700;
+
+    @media @mobile{
+    font-size: 1rem;
+        margin-bottom: 0.8rem;
+    }
+
 }
 
 .timeline__item {
@@ -50,6 +66,11 @@
     &:last-child {
         margin-bottom: 0;
     }
+
+    @media @mobile{
+        margin-bottom: 1.8rem;
+    }
+
 }
 
 .timeline__date {
