@@ -1,3 +1,5 @@
+"use strict";
+
 $(function () {
 
     let workSlider = $('[data-slider="slick"]');
@@ -25,20 +27,39 @@ $(function () {
     });
 
 
+
+
+
     // modal
     const modalCall = $("[data-modal]");
     const modalClose = $("[data-close]");
+    let modalWorks = $(".portfolio__col");
+
+    modalWorks.on("click", function (event) {
+        event.preventDefault();
+        const modalId = $('#modal_project');
+        let $this = $(this);
+        let modalWorkCetegory = $(".modal-work__info--category");
+        let modalWorkDate = $(".modal-work__category--date");
+        let thisWorkCategory = $this.data("cat");
+        let thisWorkDate = $this.find("[datetime]").attr("dateTime");
+
+        modalWorkCetegory.html(`${thisWorkCategory}`);
+        modalWorkDate.html(`${thisWorkDate}`);
+
+        modalId.addClass('show');
+        $('body').addClass("no-scroll");
+    });
 
     modalCall.on("click", function (event) {
         event.preventDefault();
+
         let $this = $(this);
         let modalId = $this.data('modal');
-
         $(modalId).addClass('show');
         $('body').addClass("no-scroll");
 
         workSlider.slick('setPosition');
-
     });
 
     modalClose.on("click", function (event) {
@@ -48,7 +69,6 @@ $(function () {
 
         modalParent.removeClass('show');
         $('body').removeClass("no-scroll");
-
     });
 
     $(".modal").on("click", function (event) {
@@ -70,7 +90,7 @@ $(function () {
     });
 
     // ===========================================
-    // slider: https://kenwheeler.github.io/slick/
+    // Slick-slider: https://kenwheeler.github.io/slick/
     // ===========================================
 
     workSlider.slick({
@@ -112,13 +132,10 @@ $(function () {
     let navToggle = $('#navToggle');
     let nav = $('#nav');
 
-    navToggle.on("click", function(event) {
+    navToggle.on("click", function (event) {
         event.preventDefault();
-
         nav.toggleClass("show");
     });
-
-
 
 });
 

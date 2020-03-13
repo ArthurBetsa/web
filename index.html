@@ -32,7 +32,7 @@
                 <a class="nav__link" href="#">ABOUT ME</a>
                 <a class="nav__link" href="#">BLOG</a>
                 <a class="nav__link" href="#">CONTACT</a>
-                <a class="nav__link nav__link--btn" href="#">HIRE ME</a>
+                <a class="nav__link nav__link--btn" data-modal="#modal_hire_me"    data-test="123312" href="#">HIRE ME</a>
             </nav>
 
             <button class="burger" type="button" id="navToggle">
@@ -94,35 +94,34 @@
         </div>
 
         <div class="portfolio">
-            <div class="portfolio__col" data-cat="App">
-                <div class="work" data-modal="#modal_project_1">
+
+            <div id = "work_1" class="portfolio__col" data-cat="App">
+                <div class="work" >
                     <img class="work__image" src="http://placehold.it/370x300">
                     <div class="work__content">
                         <div class="work__cat">Category: app</div>
                         <div class="work__title">
                             Project Title
-                            <time class="work__date" datetime="2020-01-17 14:50">2020</time>
+                            <time class="work__date" datetime="2020-02-11 14:50">2020</time>
                         </div>
                     </div>
                 </div>
-
             </div>
 
-            <div class="portfolio__col" data-cat="Website">
-                <div class="work" data-modal="#modal_project_1">
+            <div id = "work_2" class="portfolio__col" data-cat="Website">
+                <div class="work">
                     <img class="work__image" src="http://placehold.it/370x300">
                     <div class="work__content">
                         <div class="work__cat">Category: website</div>
                         <div class="work__title">
                             Project Title
-                            <time class="work__date" datetime="2020-01-17 14:50">2020</time>
+                            <time class="work__date" datetime="2020-02-07 14:50">2020</time>
                         </div>
                     </div>
                 </div>
-
             </div>
 
-            <div class="portfolio__col" data-cat="Interaction">
+            <div id = "work_3" class="portfolio__col" data-cat="Interaction">
                 <div class="work">
                     <img class="work__image" src="http://placehold.it/370x300">
                     <div class="work__content">
@@ -136,46 +135,43 @@
 
             </div>
 
-            <div class="portfolio__col" data-cat="App">
+            <div id = "work_4" class="portfolio__col" data-cat="App">
                 <div class="work">
                     <img class="work__image" src="http://placehold.it/370x300">
                     <div class="work__content">
                         <div class="work__cat">Category: app</div>
                         <div class="work__title">
                             Project Title
-                            <time class="work__date" datetime="2020-01-17 14:50">2020</time>
+                            <time class="work__date" datetime="2020-01-13 14:50">2020</time>
                         </div>
                     </div>
                 </div>
-
             </div>
 
-            <div class="portfolio__col" data-cat="Website">
+            <div id = "work_5" class="portfolio__col" data-cat="Website">
                 <div class="work">
                     <img class="work__image" src="http://placehold.it/370x300">
                     <div class="work__content">
                         <div class="work__cat">Category: website</div>
                         <div class="work__title">
                             Project Title
-                            <time class="work__date" datetime="2020-01-17 14:50">2020</time>
+                            <time class="work__date" datetime="2020-01-08 14:50">2020</time>
                         </div>
                     </div>
                 </div>
-
             </div>
 
-            <div class="portfolio__col" data-cat="Interaction">
+            <div id = "work_6" class="portfolio__col" data-cat="Interaction">
                 <div class="work">
                     <img class="work__image" src="http://placehold.it/370x300">
                     <div class="work__content">
                         <div class="work__cat">Category: interaction</div>
                         <div class="work__title">
                             Project Title
-                            <time class="work__date" datetime="2020-01-17 14:50">2020</time>
+                            <time class="work__date" datetime="2020-01-05 14:50">2020</time>
                         </div>
                     </div>
                 </div>
-
             </div>
 
         </div> <!--portfolio-->
@@ -466,7 +462,7 @@
                 <a class="footer__nav-link" href="#">About me</a>
                 <a class="footer__nav-link" href="#">Blog</a>
                 <a class="footer__nav-link" href="#">Contact</a>
-                <a class="footer__nav-link  footer__nav-link--btn" href="#">Hire me</a>
+                <a class="footer__nav-link  footer__nav-link--btn" href="#" data-modal="#modal_hire_me" >Hire me</a>
             </nav>
         </div><!-- /.footer__inner -->
 
@@ -475,7 +471,7 @@
 
 
 <!-- Modals -->
-<div id="modal_project_1" class="modal" target="_blank">>
+<div id="modal_project" class="modal" >>
     <div class="modal__dialog">
 
         <button class="modal__close" type="button" data-close>
@@ -498,7 +494,9 @@
                 <div class="modal-work__header">
                     <h3 class="modal-work__title">Project title</h3>
                     <div class="modal-work__info">
-                        category <span class="modal-work__info-divider">|</span> 2018
+                        <p class="modal-work__info--category">Category</p>
+                        <span class="modal-work__info-divider">|</span>
+                        <p class="modal-work__category--date">2018</p>
                     </div>
                 </div>
 
