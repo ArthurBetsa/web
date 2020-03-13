@@ -1,5 +1,8 @@
 "use strict";
-
+// 123123
+// 123123
+// 123123
+function(){};
 $(function () {
 
     let workSlider = $('[data-slider="slick"]');
